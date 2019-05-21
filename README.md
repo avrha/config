@@ -8,7 +8,7 @@ The default shell has been set to Powershell not Command Prompt.
 Torte colorscheme has been slightly modified, to make highlighted words easier to read.
 
 Linux Configuration:\
-Intended to be used with a temrinal emulator, but works well with Gvim.
+Intended to be used with a terminal emulator, but works well with Gvim.
 The only plugin in use is VimCompletesMe by ajh17, and was manually installed without a plugin manager.
 The default shell has been set bash.
 Uses the mojave-vim-theme colorscheme by marcopaganini.
