@@ -1,4 +1,4 @@
-" Colors & Syntax
+"Colors & Syntax
 set termguicolors
 syntax on
 color torte 
