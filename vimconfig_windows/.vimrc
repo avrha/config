@@ -27,11 +27,7 @@ set si
 "Fuzzy Finder
 set autochdir
 set complete-=i
-set path=C:\Users\username\Documents\**
-
-"Backups & Swaps
-set backupdir=C:\Backups&Swaps\Backups 
-set dir=C:\Backups&Swaps\Swaps 
+set path=C:\Users\username\Documents\** 
   
 "Abbreviations
 ab cmd rightb vert term
