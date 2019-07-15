@@ -16,7 +16,6 @@
  "Display 
  set number
  set hlsearch
- set spell
  set nowrap
  set ruler
  set wildmenu
@@ -27,4 +26,3 @@
  
  "Abbreviations
  ab cmd rightb vert term
- ab cpp !g++ -std=c++11 % -Wall -o %.out && ./%.out

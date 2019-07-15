@@ -11,7 +11,6 @@ set guioptions -=r
 "Display
 set number
 set hlsearch
-set spell
 set nowrap
 set ruler
 set wildmenu
@@ -31,7 +30,6 @@ set path=C:\Users\username\Documents\**
   
 "Abbreviations
 ab cmd rightb vert term
-ab cpp !g++ -std=c++11 % -Wall -o %.exe ; if($?) {./%.exe}
 
 "Keyboard
 set bs=2
