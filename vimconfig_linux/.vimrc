@@ -10,6 +10,7 @@ highlight Constant ctermfg=177
 "Display
 set number
 set hlsearch
+set wildmenu 
 set nowrap
 
 "Tabs
@@ -20,3 +21,7 @@ set expandtab
 "Indents
 set autoindent
 set smartindent
+
+"FuzzyFinder
+set path+=*/**
+set autochdir
