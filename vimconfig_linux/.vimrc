@@ -11,7 +11,6 @@ highlight Constant ctermfg=177
 set number
 set hlsearch
 set wildmenu 
-set nowrap
 
 "Tabs
 set tabstop=2
@@ -21,7 +20,3 @@ set expandtab
 "Indents
 set autoindent
 set smartindent
-
-"FuzzyFinder
-set path+=*/**
-set autochdir
