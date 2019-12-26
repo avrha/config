@@ -5,6 +5,7 @@ echo "PLEASE NOTE: This script will overwrite files in your home directory. Back
 echo "Continue installation? (y/n)"
 read input
 
+#installation 
 if [[ $input == y ]] || [[ $input == yes ]]; then
   rsync -avz $PWD/ $HOME --exclude /.git --exclude /README.md --exclude /setup.sh
   echo "Installation complete, exting script"
