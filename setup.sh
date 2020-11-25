@@ -8,6 +8,7 @@ read input
 #installation 
 if [[ $input == y ]] || [[ $input == yes ]]; then
   rsync -avz $PWD/ $HOME --exclude /.git --exclude /README.md --exclude /setup.sh
+  sudo fc-cache -f -v
   echo "Installation complete, exting script"
 else
   echo "Exiting script"
