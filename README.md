@@ -3,7 +3,7 @@ My work configuration for Unix-like systems.
 
 Tools in use
 ------------
-  * Bash (Shell)    
+  * ZSH (Shell)    
   * Vim (Text Editor)    
   * Git (Version Control)    
   * SSH (Remote Access)
