@@ -1,5 +1,3 @@
 alias ls='ls --color'
-alias ll='ls -l --color'
-alias la='ls -a --color'
-export PS1='\e[96m\u\e[m@\e[92m\h\e[m:\[\e[33m\]\w\[\e[0m\]\$ '
-export EDITOR='vim
+export PS1='\[\e[36m\]\u\[\e[0m\]@\[\e[32m\]\h\[\e[0m\]:\[\e[33m\]\w\[\e[0m\]$ '
+export EDITOR='vim'
