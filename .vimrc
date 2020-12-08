@@ -8,3 +8,5 @@ set shiftwidth=2
 set expandtab
 set autoindent
 set smartindent
+set belloff=all
+highlight Comment ctermfg=blue
