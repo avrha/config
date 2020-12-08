@@ -1,0 +1,29 @@
+xterm*allowBoldFonts: false
+xterm*faceName: xft: SF Mono Regular
+xterm*faceSize: 10
+
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.hintstyle: hintslight
+
+xterm*background: #000000
+xterm*foreground: #ffffff
+xterm*cursorColor: #000000
+
+xterm*color0: #2e3436
+xterm*color1: #993333
+xterm*color2: #4e9a06
+xterm*color3: #afaf5f
+xterm*color4: #733aab
+xterm*color5: #e45fff
+xterm*color6: #3fbfbf
+xterm*color7: #d3d7cf
+xterm*color8: #c65353
+xterm*color9: #c65252
+xterm*color10: #428105
+xterm*color11: #c9c992
+xterm*color12: #8d53c5
+xterm*color13: #ed92ff
+xterm*color14: #65cccc
+xterm*color15: #eeeeec
