@@ -2,6 +2,7 @@
 xterm*faceName: xft: SF Mono Regular
 xterm*faceSize: 10
 
+!Text
 Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
