@@ -8,6 +8,7 @@ Xft.hinting: true
 Xft.hintstyle: hintslight
 
 !Colorscheme
+xterm*faceName: xterm-256color
 xterm*background: #000000
 xterm*foreground: #ffffff
 xterm*cursorColor: #000000
