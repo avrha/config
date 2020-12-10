@@ -1,6 +1,6 @@
 "Color
 syntax on
-color default
+color peachpuff
 
 "Interface
 set number
