@@ -9,6 +9,8 @@ read input
 if [[ $input == y ]] || [[ $input == yes ]]; then
   rsync -avz $PWD/ $HOME --exclude /.git --exclude /README.md --exclude /setup.sh
   sudo fc-cache -f -v
+  set bell-style none
+  xrdb ~/.Xresources
   sudo update-alternatives --config x-terminal-emulator
   echo "Installation complete, exting script"
 else
