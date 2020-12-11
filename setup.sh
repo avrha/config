@@ -1,18 +1,23 @@
 #! /bin/bash
-#extract files
 
-echo "PLEASE NOTE: This script will overwrite files in your home directory. Backup is recommended."
-echo "Continue installation? (y/n)"
+RED='\033[0;31m'
+GREEN='\u001b[32m'
+YELLOW='\u001b[33m'
+NC='\033[0m' 
+
+echo -e "${RED}-PLEASE NOTE-${NC} Any existing media will be overwritten. Backup is recommended."
+echo -e "Install Config? ${GREEN}Y${YELLOW}/${RED}N${NC}"
 read input
 
-#installation 
-if [[ $input == y ]] || [[ $input == yes ]]; then
+if [[ $input == Y ]] || [[ $input == y ]] || [[ $input == yes ]]; then
   rsync -avz $PWD/ $HOME --exclude /.git --exclude /README.md --exclude /setup.sh
-  sudo fc-cache -f -v
-  set bell-style none
-  xrdb ~/.Xresources
+  sudo apt install vim xterm tmux
   sudo update-alternatives --config x-terminal-emulator
-  echo "Installation complete, exting script"
+  sudo fc-cache -f -v
+  xrdb ~/.Xresources
+  echo -e "${GREEN}-INSTALL SUCCESSFUL-" 
+elif [[ $input == N ]] || [[ $input == n ]] || [[ $input == no ]]; then
+  echo -e "${RED}-EXITING-" 
 else
-  echo "Exiting script"
+  echo -e "${RED}-INVALID INPUT-"
 fi
