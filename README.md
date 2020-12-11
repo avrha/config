@@ -13,7 +13,6 @@ Tools in use
 Install
 -------
 ```
-chmod +x setup.sh
 ./setup.sh
 ```
 
