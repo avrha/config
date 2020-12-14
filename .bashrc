@@ -1,4 +1,4 @@
-#uxterm pid
+#uxterm id
 var=$(ps -ax | grep uxterm)
 pid=${var:0:5}
 
@@ -6,21 +6,23 @@ pid=${var:0:5}
 function exit { kill -9 "$pid" && pkill -f tmux && rm .*.swp;}
 export -f exit
 
-#exit binding
-bind -x '"\C-j":"exit"'
+#exit bind
+if [ -t 1 ]; then
+  bind -x '"\C-k":"exit"'
+fi
 
-#tmux
-if command -v tmux>/dev/null; then
-  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && tmux -2
-  fi
-    
-#aliases
+#launch tmux
+case $- in *i*)
+  [ -z "$TMUX" ] && exec tmux -2
+esac
+
+#ls aliases
 alias ls='ls --color'
 alias ll='ls -l --color'
 alias la='ls -a --color'
-    
-#prompt
+
+#command prompt
 export PS1='\[\e[36m\]\u\[\e[0m\]@\[\e[32m\]\h\[\e[0m\]:\[\e[33m\]\w\[\e[0m\]$ '
-    
+
 #default editor
 export EDITOR='vim'
