@@ -1,15 +1,16 @@
 !Font
-xterm*faceName: xft: SF Mono Regular
+xterm*faceName: SF Mono Regular
 xterm*faceSize: 10
+xterm*renderfont: true
 
-!Text
-Xft.dpi: 96
-Xft.antialias: true
-Xft.hinting: true
-Xft.hintstyle: hintslight
+!Clipboard
+Xterm*selectToClipboard: true
 
-!Copy URL
+!Grab URL
 xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+
+!Scroll
+xterm*saveLines: 2000
 
 !Colorscheme
 xterm*background: #000000
