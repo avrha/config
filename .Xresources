@@ -1,6 +1,6 @@
 !Font
-xterm*faceName: SF Mono Regular
-xterm*faceSize: 10
+xterm*faceName: xft: SF Mono Regular
+xterm*faceSize: 12
 xterm*renderfont: true
 
 !Clipboard
@@ -8,6 +8,11 @@ Xterm*selectToClipboard: true
 
 !Grab URL
 xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+
+!Copy & Paste
+xterm*VT100.Translations: #override \
+  Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n\
+  Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
 
 !Scroll
 xterm*saveLines: 2000
