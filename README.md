@@ -1,11 +1,11 @@
 # Configuration 
-My work configuration for Unix-like systems.    
+My work configuration for Unix-like systems, specifically Ubuntu 18.04/20.04.
 
 Tools in use
 ------------
   * Bash (Shell)    
   * Vim (Text Editor)    
-  * xterm (Terminal App)
+  * Gnome-Terminal (Terminal App)
   * tmux (Multiplexer)
   * Git (Version Control)    
   * SSH (Remote Access)
