@@ -10,11 +10,10 @@ echo -e "Install Config? ${GREEN}Y${YELLOW}/${RED}N${NC}"
 read input
 
 if [[ $input == Y ]] || [[ $input == y ]] || [[ $input == yes ]]; then
-  rsync -avz $PWD/ $HOME --exclude /.git --exclude /README.md --exclude /setup.sh
-  sudo apt install vim xterm tmux
-  sudo update-alternatives --config x-terminal-emulator
+  rsync -avz $PWD/ $HOME --exclude /.git --exclude /README.md --exclude /setup.sh --exclude /termConfig.txt
+  dconf load /org/gnome/terminal/ < termConfig.txt
+  sudo apt install git vim tmux -y
   sudo fc-cache -f -v
-  xrdb ~/.Xresources
   echo -e "${GREEN}-INSTALL SUCCESSFUL-" 
 elif [[ $input == N ]] || [[ $input == n ]] || [[ $input == no ]]; then
   echo -e "${RED}-EXITING-" 
