@@ -5,7 +5,7 @@ Tools in use
 ------------
   * Bash (Shell)    
   * Vim (Text Editor)    
-  * Gnome-Terminal (Terminal App)
+  * uxterm (Terminal App)
   * tmux (Multiplexer)
   * Git (Version Control)    
   * SSH (Remote Access)
