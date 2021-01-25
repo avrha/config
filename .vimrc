@@ -1,23 +1,11 @@
-"Color
 syntax on
-color default
-
-"Interface
+color peachpuff
+highlight Comment ctermfg=green
 set number
-set wildmenu 
-set belloff=all
-
-"Search
+set ruler
+set wildmenu
 set hlsearch
-set ignorecase
-set smartcase
-set incsearch
-
-"Tabs
 set tabstop=2
 set shiftwidth=2
 set expandtab
-
-"Indents
 set autoindent
-set smartindent
