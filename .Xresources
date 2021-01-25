@@ -1,4 +1,4 @@
-Name: xft: Droid Sans Mono
+xterm*faceName: xft: Droid Sans Mono
 xterm*faceSize: 11
 xterm*saveLines: 2000
 xterm*foreground: white
