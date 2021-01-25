@@ -1,5 +1,4 @@
 syntax on
-color peachpuff
 highlight Comment ctermfg=green
 set number
 set ruler
