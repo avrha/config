@@ -3,3 +3,4 @@ xterm*faceSize: 11
 xterm*saveLines: 2000
 xterm*foreground: white
 xterm*background: black
+xterm*color12: purple
