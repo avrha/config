@@ -1,12 +1,9 @@
-!Font & Lines
 xterm*faceName: xft: Droid Sans Mono
 xterm*faceSize: 11
 xterm*saveLines: 2000
-
-!Colors
 xterm*foreground: white
 xterm*background: black
 xterm*color4: purple
 xterm*color12: mediumorchid
-xterm*color5: dodgerblue
-xterm*color13: blue
+xterm*color5: royalblue
+xterm*color13: dodgerblue
