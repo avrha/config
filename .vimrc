@@ -26,6 +26,7 @@ set expandtab
 "Command Abbreviations 
 command Gcc execute "!gcc -g -o0 -Wall % -o %:r.o && gdb %:r.o"
 command Py execute "!python3 %" 
+command Cls execute "!clear"
 
 "Ctrl-Backspace Deletion
 imap <C-BS> <C-W>
