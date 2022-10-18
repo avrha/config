@@ -16,7 +16,7 @@ echo -e "Install Config? ${GREEN}Y${YELLOW}/${RED}N${NC}"
 read input
 
 if [[ $input == Y ]] || [[ $input == y ]] || [[ $input == yes ]]; then
-  apt install rsync vim tmux xterm -y
+  apt install xclip rsync vim tmux xterm -y
   rsync -avz $PWD/ $HOME --exclude /.git --exclude /README.md --exclude /setup.sh 
   xrdb .Xresources
   sudo update-alternatives --config x-terminal-emulator

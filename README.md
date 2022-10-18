@@ -1,5 +1,5 @@
 # Configuration 
-My work configuration for Unix-like systems, specifically Ubuntu 18.04/20.04.
+My work configuration for Unix-like systems, specifically Debian 11.
 
 Tools in use
 ------------
