@@ -5,12 +5,18 @@ GREEN='\u001b[32m'
 YELLOW='\u001b[33m'
 NC='\033[0m' 
 
+
+if [ "$EUID" -ne 0 ]
+  then echo -e "${RED}-RUN AS ROOT-${NC}"
+  exit
+fi
+
 echo -e "${RED}-PLEASE NOTE-${NC} Any existing media will be overwritten. Backup is recommended."
 echo -e "Install Config? ${GREEN}Y${YELLOW}/${RED}N${NC}"
 read input
 
 if [[ $input == Y ]] || [[ $input == y ]] || [[ $input == yes ]]; then
-  sudo apt install git vim tmux xterm -y
+  apt install rsync vim tmux xterm -y
   rsync -avz $PWD/ $HOME --exclude /.git --exclude /README.md --exclude /setup.sh 
   xrdb .Xresources
   sudo update-alternatives --config x-terminal-emulator
