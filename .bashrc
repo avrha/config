@@ -16,7 +16,7 @@ export PS1='\[\e[96m\]\u\[\e[0m\]@\[\e[92m\]\h\[\e[0m\]:\[\e[33m\]\w\[\e[0m\]\[\
 
 #env variables
 export EDITOR='vim'
-export LESS='-N'
+export LESS='-RN'
 
 #aliases 
 alias l='ls -h --color=auto'
