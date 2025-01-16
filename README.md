@@ -18,5 +18,4 @@ Install
 
 Please Note
 -----------
-Installation script does not backup files that are overwritten.
-Backup is recommended before installation.
+The installation script provides an option to back up any files that will be overwritten. It is recommended backup your existing configuration before proceeding.

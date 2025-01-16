@@ -25,8 +25,8 @@ set shiftwidth=2
 set expandtab
 
 "Command Abbreviations 
-command Gcc execute "!gcc -g -o0 -Wall % -o %:r.o && gdb %:r.o"
-command Gpp execute "!g++ -g -o0 -Wall % -o %:r.o && gdb %:r.o"
+command Gcc execute "!gcc -g -o0 -Wall % -o %:r.out && gdb -q %:r.out"
+command Gpp execute "!g++ -g -o0 -Wall % -o %:r.out && gdb %:r.out"
 command Py execute "!python3 %" 
 command Run execute "./%" 
 command Cls execute "!clear"
