@@ -25,7 +25,7 @@ case "$backup_input" in
     echo -e "${GREEN}Creating backup in:${NC} $BACKUP_DIR"
     mkdir -p "$BACKUP_DIR"
 
-    CONFIG_FILES=(".bashrc" ".vimrc" ".tmux.conf" ".inputrc" ".Xresources")
+    CONFIG_FILES=(".bashrc" ".vimrc" ".tmux.conf" ".inputrc" ".Xresources" ".profile")
     for file in "${CONFIG_FILES[@]}"; do
       if [[ -f "$HOME/$file" ]]; then
         cp "$HOME/$file" "$BACKUP_DIR/"
