@@ -46,10 +46,11 @@ esac
 echo -e "Proceed with installing the new config? ${GREEN}Y${YELLOW}/${RED}N${NC}"
 read -r input
 
+# Installation
 case "$input" in
   [Yy]|[Yy][Ee][Ss])
     echo -e "${GREEN}Installing required packages...${NC}"
-    if ! apt install -y xclip vim tmux xterm; then
+    if ! apt-get install -y xclip vim tmux xterm; then
       echo -e "${RED}-ERROR-${NC} Package installation failed."
       exit 1
     fi
@@ -72,11 +73,29 @@ case "$input" in
     fi
 
     echo -e "${GREEN}Setting default terminal emulator...${NC}"
-    sudo update-alternatives --config x-terminal-emulator
+    update-alternatives --config x-terminal-emulator
 
     echo -e "${GREEN}Downloading and installing terminal font...${NC}"
-    wget https://download.virtualbox.org/virtualbox/7.1.0/Oracle_VirtualBox_Extension_Pack-7.1.0.vbox-extpack
+    wget https://github.com/supercomputra/SF-Mono-Font/blob/master/SFMono-Medium.otf
     mv SFMono-Medium.otf /usr/local/share/fonts
+
+    # Modify GRUB
+    case "$grub_input" in
+      [Yy]|[Yy][Ee][Ss])
+        echo -e "${RED}-WARNING-${NC} This will modify your GRUB settings, modify GRUB?"
+        echo -e "${GREEN}Updating GRUB configuration...${NC}"
+        echo 'GRUB_BACKGROUND=""' | tee -a /etc/default/grub
+        update-grub
+        echo -e "${GREEN}-GRUB UPDATE SUCCESSFUL-${NC}"
+        ;;
+      [Nn]|[Nn][Oo])
+        echo -e "${YELLOW}-Skipping GRUB update-${NC}"
+        ;;
+      *)
+        echo -e "${RED}-INVALID INPUT-${NC} Please enter Y or N."
+        exit 1
+        ;;
+    esac
 
     echo -e "${GREEN}-INSTALL SUCCESSFUL-${NC}"
     ;;
