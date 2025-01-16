@@ -1,5 +1,4 @@
 #!/bin/bash
-#!/bin/bash
 
 # Color Variables
 RED='\033[0;31m'
@@ -74,6 +73,10 @@ case "$input" in
 
     echo -e "${GREEN}Setting default terminal emulator...${NC}"
     sudo update-alternatives --config x-terminal-emulator
+
+    echo -e "${GREEN}Downloading and installing terminal font...${NC}"
+    wget https://download.virtualbox.org/virtualbox/7.1.0/Oracle_VirtualBox_Extension_Pack-7.1.0.vbox-extpack
+    mv SFMono-Medium.otf /usr/local/share/fonts
 
     echo -e "${GREEN}-INSTALL SUCCESSFUL-${NC}"
     ;;
