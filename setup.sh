@@ -6,12 +6,6 @@ GREEN='\u001b[32m'
 YELLOW='\u001b[33m'
 NC='\033[0m'
 
-# Ensure script is run as root
-if [[ $EUID -ne 0 ]]; then
-  echo -e "${RED}-ERROR-${NC} This script must be run as root."
-  exit 1
-fi
-
 echo -e "${RED}-WARNING-${NC} Any existing configuration files will be overwritten. Backup is recommended."
 echo -e "Would you like to backup your existing config files? ${GREEN}Y${YELLOW}/${RED}N${NC}"
 read -r backup_input
@@ -50,7 +44,7 @@ read -r input
 case "$input" in
   [Yy]|[Yy][Ee][Ss])
     echo -e "${GREEN}Installing required packages...${NC}"
-    if ! apt-get install -y xclip vim tmux xterm; then
+    if ! sudo apt-get install -y xclip vim tmux xterm; then
       echo -e "${RED}-ERROR-${NC} Package installation failed."
       exit 1
     fi
@@ -73,29 +67,15 @@ case "$input" in
     fi
 
     echo -e "${GREEN}Setting default terminal emulator...${NC}"
-    update-alternatives --config x-terminal-emulator
+    sudo update-alternatives --config x-terminal-emulator
 
-    echo -e "${GREEN}Downloading and installing terminal font...${NC}"
+    echo -e "${GREEN}Downloading terminal font...${NC}"
     wget https://github.com/supercomputra/SF-Mono-Font/blob/master/SFMono-Medium.otf
-    mv SFMono-Medium.otf /usr/local/share/fonts
 
-    # Modify GRUB
-    case "$grub_input" in
-      [Yy]|[Yy][Ee][Ss])
-        echo -e "${RED}-WARNING-${NC} This will modify your GRUB settings, modify GRUB?"
-        echo -e "${GREEN}Updating GRUB configuration...${NC}"
-        echo 'GRUB_BACKGROUND=""' | tee -a /etc/default/grub
-        update-grub
-        echo -e "${GREEN}-GRUB UPDATE SUCCESSFUL-${NC}"
-        ;;
-      [Nn]|[Nn][Oo])
-        echo -e "${YELLOW}-Skipping GRUB update-${NC}"
-        ;;
-      *)
-        echo -e "${RED}-INVALID INPUT-${NC} Please enter Y or N."
-        exit 1
-        ;;
-    esac
+    echo -e "${GREEN}Installing terminal font...${NC}"
+    sudo mv SFMono-Medium.otf /usr/share/fonts/opentype/
+    sudo fc-cache -f -v
+    xrdb -merge ~/.Xresources
 
     echo -e "${GREEN}-INSTALL SUCCESSFUL-${NC}"
     ;;
