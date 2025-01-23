@@ -69,11 +69,8 @@ case "$input" in
     echo -e "${GREEN}Setting default terminal emulator...${NC}"
     sudo update-alternatives --config x-terminal-emulator
 
-    echo -e "${GREEN}Downloading terminal font...${NC}"
-    wget https://github.com/supercomputra/SF-Mono-Font/blob/master/SFMono-Medium.otf
-
     echo -e "${GREEN}Installing terminal font...${NC}"
-    sudo mv SFMono-Medium.otf /usr/share/fonts/opentype/
+    sudo mv fonts/SFMonoMedium.otf fonts/SFMonoRegular.otf /home/avrha/.local/share/fonts/
     sudo fc-cache -f -v
     xrdb -merge ~/.Xresources
 
