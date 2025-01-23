@@ -70,7 +70,7 @@ case "$input" in
     sudo update-alternatives --config x-terminal-emulator
 
     echo -e "${GREEN}Installing terminal font...${NC}"
-    sudo mv fonts/SFMonoMedium.otf fonts/SFMonoRegular.otf /home/avrha/.local/share/fonts/
+    sudo cp fonts/SFMonoMedium.otf fonts/SFMonoRegular.otf /home/avrha/.local/share/fonts/
     sudo fc-cache -f -v
     xrdb -merge ~/.Xresources
 
