@@ -10,9 +10,7 @@ Tools in use
 
 Install
 -------
-```
 In a terminal, run the installation script by executing the command ``` ./setup.sh ```.
-```
 
 Please Note
 -----------
