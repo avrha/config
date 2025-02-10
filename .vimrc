@@ -14,7 +14,6 @@ set hlsearch
 set smartcase
 set wildmenu
 set ruler
-set nowrap
 set belloff=all
 
 "Indents and Tabs

@@ -1,19 +1,17 @@
 # Configuration 
-My work configuration for Unix-like systems, specifically Debian 11.
+My work configuration for Unix-like systems, specifically Debian 12.
 
 Tools in use
 ------------
   * Bash (Shell)    
   * Vim (Text Editor)    
-  * uxterm (Terminal App)
+  * xterm (Terminal App)
   * tmux (Multiplexer)
-  * Git (Version Control)    
-  * SSH (Remote Access)
 
 Install
 -------
 ```
-./setup.sh
+In a terminal, run the installation script by executing the command ``` ./setup.sh ```.
 ```
 
 Please Note
