@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Color Variables
 RED='\033[0;31m'
 GREEN='\u001b[32m'
 YELLOW='\u001b[33m'
@@ -10,7 +9,6 @@ echo -e "${RED}-WARNING-${NC} Any existing configuration files will be overwritt
 echo -e "Would you like to backup your existing config files? ${GREEN}Y${YELLOW}/${RED}N${NC}"
 read -r backup_input
 
-# Backup Directory
 BACKUP_DIR="$HOME/config_backup_$(date +%Y%m%d_%H%M%S)"
 
 case "$backup_input" in
@@ -40,7 +38,6 @@ esac
 echo -e "Proceed with installing the new config? ${GREEN}Y${YELLOW}/${RED}N${NC}"
 read -r input
 
-# Installation
 case "$input" in
   [Yy]|[Yy][Ee][Ss])
     echo -e "${GREEN}Installing required packages...${NC}"
@@ -70,7 +67,11 @@ case "$input" in
     sudo update-alternatives --config x-terminal-emulator
 
     echo -e "${GREEN}Installing terminal font...${NC}"
-    sudo cp fonts/SFMonoMedium.otf fonts/SFMonoRegular.otf $HOME/.local/share/fonts/
+    if [[ ! -d "$HOME/.local/share/fonts" ]]; then
+      mkdir -p "$HOME/.local/share/fonts"
+    fi
+
+    cp fonts/SFMonoMedium.otf fonts/SFMonoRegular.otf $HOME/.local/share/fonts/
     sudo fc-cache -f -v
    xrdb -merge ~/.Xresources
 
@@ -87,4 +88,3 @@ case "$input" in
     exit 1
     ;;
 esac
-
