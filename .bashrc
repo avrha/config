@@ -1,5 +1,5 @@
 # Launch tmux, exclude VS Code
-if [[ -z "$TMUX" ]] && [[ "$TERM_PROGRAM" != "vscode" ]]; then
+if [[ -z "$TMUX" ]] && ! pstree -s $$ | grep -wq code; then
   exec tmux -2
 fi
 
