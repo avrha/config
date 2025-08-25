@@ -14,4 +14,4 @@ In a terminal, run the installation script by executing the command ``` ./setup.
 
 Please Note
 -----------
-The installation script provides an option to back up any files that will be overwritten. It is recommended to backup your existing configuration before proceeding.
+The installation script provides an option to back up any files that will be overwritten. It is highly recommended to backup your existing configuration before proceeding.
