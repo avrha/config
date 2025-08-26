@@ -3,6 +3,7 @@ set bell-style none
 
 #autocomplete
 TAB:menu-complete
+"\e[Z": menu-complete-backward
 set show-all-if-ambiguous on
 set completion-ignore-case on
 set menu-complete-display-prefix on
