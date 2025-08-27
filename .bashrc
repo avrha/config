@@ -6,7 +6,7 @@ fi
 # Command prompt
 parse_git_branch() {
     git rev-parse --is-inside-work-tree &>/dev/null && \
-    echo " ($(git branch --show-current))" || echo ""
+    echo " => ($(git branch --show-current))" || echo ""
 }
 export PS1='\[\e[96m\]\u\[\e[0m\]@\[\e[92m\]\h\[\e[0m\]:\[\e[33m\]\w\[\e[0m\]\[\e[31m\]$(parse_git_branch)\[\e[0m\]\$ '
 
